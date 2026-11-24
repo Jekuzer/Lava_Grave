@@ -866,6 +866,15 @@
         - map: [ "enum.EdgeLayer.West" ]
           state: rock_west
 
+- type: entity
+  parent: WallRock
+  id: WallRockIndestructible
+  name: rock
+  suffix: indestructible
+  components:
+  - type: Destructible
+    thresholds: []
+
 # Ore veins
 - type: entity
   id: WallRockCoal
@@ -1214,6 +1223,15 @@
       state: rock_wall_north
     - map: [ "enum.EdgeLayer.West" ]
       state: rock_wall_west
+
+- type: entity
+  parent: WallRockBasalt
+  id: WallRockBasaltIndestructible
+  name: basalt
+  suffix: indestructible
+  components:
+  - type: Destructible
+    thresholds: []
 
 - type: entity
   id: WallRockBasaltCoal

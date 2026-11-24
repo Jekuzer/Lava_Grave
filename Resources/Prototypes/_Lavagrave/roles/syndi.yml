@@ -1,0 +1,41 @@
+# синдикатские роли
+- type: job
+  id: LavaGSyndiWorker
+  name: рабочий синдиката
+  description: Простой рабочий синдиката, ни дать ни взять.
+  playTimeTracker: JobSyndiWorker
+  requirements:
+  - !type:DepartmentTimeRequirement
+    department: Cargo
+    time: 9000 # 2.5 hrs
+  icon: "JobIconLavaShaftMiner" # Wizden's icon is already called shaft miner for whatever reason.
+  startingGear: SyndiWorkerGear
+  guides:
+  - Salvage 
+  - Cargo
+  supervisors: job-supervisors-qm
+  skills: # CorvaxGoob-Skills
+  - Shooting
+  - Butchering
+  
+- type: startingGear
+  id: SyndiWorkerGear
+  equipment:
+## Goob comment out - jumpsuit: ClothingUniformJumpsuitShaftMiner
+    id: SyndicateIDCard
+    ears: ClothingHeadsetAltSyndicate
+  storage:
+    back:
+    - ClothingBackpackSyndicate
+
+- type: chameleonOutfit
+  id: SyndiWorkerChameleonOutfit
+  job: LavaGSyndiWorker
+  equipment:
+    head: ClothingHeadHatSyndie
+    shoes: ClothingShoesBootsCombat
+    eyes: ClothingEyesGlassesCheapSunglasses
+    gloves: ClothingHandsGlovesFingerless
+
+- type: playTimeTracker
+  id: SyndiWorkerTime
